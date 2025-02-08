@@ -109,12 +109,16 @@ closeBtn.addEventListener("click", () => {
 lightbox.addEventListener("click", (e) => {
   if (!e.target.classList.contains("lightbox__content")) {
     lightbox.classList.remove("is-open");
+    const image = document.querySelector(".lightbox__image");
+    image.src = "";
   }
 });
 
 body.addEventListener("keydown", (e) => {
   if (e.code === "Escape") {
     lightbox.classList.remove("is-open");
+    const image = document.querySelector(".lightbox__image");
+    image.src = "";
   }
 });
 
